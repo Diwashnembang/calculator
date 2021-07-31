@@ -1,0 +1,41 @@
+/* variable */
+:root{
+    --white:#ffffff;
+    --blue:#c4c4c4;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 8px;
+}
+
+
+/* mobile designe */
+main{
+    margin:35vh auto 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    width:50vh;
+}
+
+#body{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+.button{
+    font-size: 6rem;
+    text-align: center;
+    border: rgb(214, 214, 14) 2px solid;
+}
+
+
+#display {
+    font-size: 6rem;
+    text-align: end;
+    padding-right: 1rem;
+}
