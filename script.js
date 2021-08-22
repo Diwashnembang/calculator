@@ -9,12 +9,9 @@ function clear(){
 
 
 function delet(){
-    console.log(currentNumber);
     let newString=Array.from(currentNumber);
     newString.splice(newString.length-1,1);
     currentNumber=newString.join("");
-    console.log(newString);
-    console.log(currentNumber)
 
 }
 
@@ -45,24 +42,25 @@ function compute(){
         case '+':
             currentNumber=+currentNumber+ +previousNumber;
             break;
-        case '-':
-            currentNumber=+previousNumber - currentNumber;
-            break;
-        case '*':
-             currentNumber=+currentNumber * +previousNumber;
-            break;  
-        
-        case '/':
-            currentNumber=+currentNumber / +previousNumber;
-            break; 
-
-        default:
-            return;
-            }
-
-        whatTodo=undefined;
-        previousNumber=" ";
-        
+            case '-':
+                currentNumber=+previousNumber - currentNumber;
+                break;
+                case '*':
+                    currentNumber=+currentNumber * +previousNumber;
+                    break;  
+                    
+                    case '/':
+                        currentNumber=+currentNumber / +previousNumber;
+                        break; 
+                        
+                        default:
+                            return;
+                        }
+                        
+                        console.log(typeof(currentNumber))
+                        whatTodo=undefined;
+                        previousNumber=" ";
+                        console.log("the",currentNumber)
         
     }
     
@@ -119,3 +117,4 @@ deletButton.addEventListener("click",()=>{
     delet();
     updateScreen();
 })
+
