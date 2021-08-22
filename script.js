@@ -1,3 +1,23 @@
+
+
+
+function clear(){
+    currentNumber='';
+    previousNumber='';
+    whatTodo='';
+}
+
+
+function delet(){
+    console.log(currentNumber);
+    let newString=Array.from(currentNumber);
+    newString.splice(newString.length-1,1);
+    currentNumber=newString.join("");
+    console.log(newString);
+    console.log(currentNumber)
+
+}
+
 function appendNumbers(number){
     if(currentNumber.includes(".") && number===".") return;
     currentNumber= currentNumber+number;
@@ -89,5 +109,13 @@ equallButton.addEventListener("click",()=>{
 
 })
 
+clearButton.addEventListener("click",()=>{
+    clear();
+    updateScreen();
+})
 
 
+deletButton.addEventListener("click",()=>{
+    delet();
+    updateScreen();
+})
